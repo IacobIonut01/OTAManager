@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">OTA-Merkezi</string>
+
+    <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
+    <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
+
+    <string name="action_settings">Yapılandırma</string>
+    <string name="title_activity_settings">Ayarlar</string>
+
+
+
+    <!-- Example General settings -->
+
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string-array name="pref_example_list_titles">
+        <item>Her zaman</item>
+        <item>Mümkün Olduğunda</item>
+        <item>Asla</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 dakika</item>
+        <item>30 dakika</item>
+        <item>1 saat</item>
+        <item>3 saat</item>
+        <item>6 saat</item>
+        <item>Asla</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Notifications -->
+
+    <string name="update_button">Güncellemeleri kontrol et</string>
+    <string name="reboot_to_recovery">Kurtarma için Yeniden Başlat</string>
+    <string name="update_button2">Güncellemeleri kontrol et</string>
+    <string name="reboot_confirm">Yeniden Başlat</string>
+    <string name="hello_blank_fragment">Merhaba boş bölüm</string>
+    <string name="others">Diğerleri</string>
+    <string name="switchtest">Anahtar testi</string>
+    <string name="ota_downloader">OTA İndirici</string>
+    <string name="all_roms">Tüm Romlar</string>
+    <string name="click_button_for_download_miui_8">MIUI 8 Rom indirmek için butona Tıklayın</string>
+    <string name="miui_8_version_2">MIUI 8 Versiyon 2</string>
+    <string name="miui_8">MIUI 8</string>
+    <string name="gioneesplus_group_isn_t_responsable_for_dead_sdcard_bootloop_and_others_issues_all_roms_are_tested_by_iacob">Uygulama ve Romlardan Oluşabilecek Sorunlarda GioneeSPLUS Gurubu Sorumluluk Kabul Etmez , Tüm Sorumluluk işlemi Yapan kişiye aittir, Tüm Romlar Iacob tarafından test Edilmiştir.</string>
+    <string name="download_miui_8_v2">MIUI 8 V2 indir</string>
+    <string name="download_zip">Zip indir</string>
+    <string name="openFolder">İndirilenler klasörünü aç</string>
+    <string name="downloadStarted">İndirme başladı…</string>
+    <string name="downloadCompleted">İndirme Tamamlandı…</string>
+    <string name="downloadFailed">İndirme Başarısız…</string>
+    <string name="downloadAgain">Yeniden indir</string>
+    <string name="you_are_curently_on">ROM Version </string>
+    <string name="your_device_are">Cihazınız</string>
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="newmain">OTA Manager</string>
+    <string name="developers">Developers:</string>
+    <string name="iacob_ionut">Iacob Ionut</string>
+    <string name="itsric_itsric">Itsric Itsric</string>
+    <string name="cristian_campean_craciun">Cristian Campean-Craciun</string>
+    <string name="about">About</string>
+    <string name="install_your_latest_update">Install your latest update</string>
+</resources>

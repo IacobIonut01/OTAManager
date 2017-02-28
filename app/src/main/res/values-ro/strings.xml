@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OTA-Center</string>
+    <string name="action_settings">Configurari</string>
+    <string name="all_roms">Toate ROM-urile</string>
+    <string name="click_button_for_download_miui_8">Descarca MIUI8</string>
+    <string name="downloadAgain">Descarca din nou</string>
+    <string name="downloadCompleted">Descarcare Terminata</string>
+    <string name="downloadFailed">Descarcare Esuata</string>
+    <string name="downloadStarted">Descarcarea a inceput</string>
+    <string name="download_miui_8_v2">Descarca MIUI8 V2</string>
+    <string name="download_zip">Descarca Arhiva</string>
+    <string name="gioneesplus_group_isn_t_responsable_for_dead_sdcard_bootloop_and_others_issues_all_roms_are_tested_by_iacob">GioneeSPLUS GROUP isn\'t responsable for Dead SDCARD , bootloop and others issues , all ROMS are tested by Iacob.</string>
+    <string name="hello_blank_fragment">Fragment Gol</string>
+    <string name="miui_8">MIUI 8</string>
+    <string name="miui_8_version_2">MIUI 8 Version 2</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="openFolder">Deschide Folderul Descarcat</string>
+    <string name="ota_downloader">OTA Downloader</string>
+    <string name="others">Altele</string>
+    <string name="pref_default_display_name">John Smith</string>
+    <string name="reboot_confirm">Restart</string>
+    <string name="reboot_to_recovery">Restarteaza in Recovery</string>
+    <string name="switchtest">Switch Test</string>
+    <string name="title_activity_settings">Setari</string>
+    <string name="update_button">Verifica pentru Update-uri</string>
+    <string name="update_button2">Verifica pentru Update-uri</string>
+    <string name="you_are_curently_on">Versiunea ROM-ului </string>
+    <string name="your_device_are">Device-ul tau este </string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+    <string name="title_activity_setup"></string>
+    <string name="newmain">OTA Manager</string>
+    <string name="developers">Developers:</string>
+    <string name="iacob_ionut">Iacob Ionut</string>
+    <string name="itsric_itsric">Itsric Itsric</string>
+    <string name="cristian_campean_craciun">Cristian Campean-Craciun</string>
+    <string name="about">About</string>
+    <string name="install_your_latest_update">Install your latest update</string>
+
+</resources>

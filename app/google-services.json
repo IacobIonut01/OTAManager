@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "451459845292",
+    "firebase_url": "https://ota-center-fe276.firebaseio.com",
+    "project_id": "ota-center-fe276",
+    "storage_bucket": "ota-center-fe276.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451459845292:android:e69df99e06f716fb",
+        "android_client_info": {
+          "package_name": "splusteam.center.ota.ota_center"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451459845292-v3verbvoo694i5qh0qerumgr2beo2jgl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "splusteam.center.ota.ota_center",
+            "certificate_hash": "EA5D258C39EA023F88114EE846973D7D241048AB"
+          }
+        },
+        {
+          "client_id": "451459845292-2sg9hti7rqmkvlbvvlnc9e2kp20h0siu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4MPOrxFNdEu4g2e0_yvKiziz-xT4H5B4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451459845292-2sg9hti7rqmkvlbvvlnc9e2kp20h0siu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
