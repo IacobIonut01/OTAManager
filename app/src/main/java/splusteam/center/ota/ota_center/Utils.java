@@ -27,6 +27,9 @@ public class Utils {
         return SystemProperties.get("ro.otamanager.status");
     }
 
+    public static String getRecoveryID() { return SystemProperties.get("ro.otamanager.recoveryid"); }
+
+    public static String getBetaSupport() {return SystemProperties.get("ro.otamanager.beta"); }
 
     public static long getInstalledBuildDate() {
         return Build.TIME / 1000;
