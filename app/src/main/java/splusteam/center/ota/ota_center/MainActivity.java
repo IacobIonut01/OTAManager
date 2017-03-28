@@ -647,11 +647,11 @@ public class MainActivity extends AppCompatActivity
         }
     };
 
-    public void OnClick_beta(View view) {
+    /*public void OnClick_beta(View view) {
         Toast toast = Toast.makeText(MainActivity.this,
                 "Android Beta in progress..." + " Please wait new app version.", Toast.LENGTH_LONG);
         toast.show();
         /*Intent intent = new Intent(this, beta_program.class);
-        startActivity(intent);*/
-    }
+        startActivity(intent);
+    }*/
 }
