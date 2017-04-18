@@ -8,12 +8,9 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main"
     tools:context="splusteam.center.ota.ota_center.MainActivity"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingBottom="15dp"
+    android:paddingBottom="12dp"
     android:id="@+id/mainLayout">
 
-    #ROM Version Card#
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,185 +25,280 @@
             android:weightSum="1">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/rom_informations"
+                android:id="@+id/rom_view_Card"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="15dp"
-                app:cardElevation="5dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/textView3"
-                        android:layout_toStartOf="@+id/textView3"
-                        android:visibility="visible"
-                        app:srcCompat="@android:drawable/ic_menu_info_details" />
-
-                    <TextView
-                        android:id="@+id/textnumber"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/imageView5"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="15dp"
-                        android:text="/*Show ROM*/"
-                        android:textAlignment="center"
-                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/recoveryid_2"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignStart="@+id/textnumber"
-                        android:layout_below="@+id/textnumber"
-                        android:layout_marginTop="14dp"
-                        android:text="/*Show Recovery Version*/"
-                        android:textAlignment="center"
-                        android:textColor="@color/cast_expanded_controller_background_color"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginRight="16dp"
-                        android:text="@string/you_are_curently_on"
-                        android:textAllCaps="false"
-                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Android Version : "
-                        android:textColor="@color/cast_expanded_controller_background_color"
-                        android:textSize="18sp"
-                        android:layout_marginTop="14dp"
-                        android:layout_below="@+id/recoveryid_2"
-                        android:layout_toStartOf="@+id/textbuild"
-                        android:layout_marginEnd="9dp" />
-
-                    <TextView
-                        android:id="@+id/textbuild"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignEnd="@+id/recoveryid_2"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginEnd="54dp"
-                        android:text="a-v-v"
-                        android:textColor="@color/cast_expanded_controller_background_color"
-                        android:textSize="18sp" />
-
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/debug"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/rom_informations"
                 android:layout_marginTop="11dp"
-                app:cardElevation="5dp">
-
-                <RelativeLayout
-                    android:id="@+id/relativeLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/rom_informations"
-                    android:layout_marginTop="12dp"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/textView2"
-                        android:layout_toStartOf="@+id/textView2"
-                        app:srcCompat="@android:drawable/ic_menu_info_details"
-                        android:layout_alignParentTop="true" />
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/your_device_are"
-                        android:textAllCaps="false"
-                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                        android:textSize="24sp"
-                        android:layout_alignParentTop="true" />
-
-                    <TextView
-                        android:id="@+id/textdevice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/textView2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="12dp"
-                        android:text="/*Show Device*/"
-                        android:textAllCaps="true"
-                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                        android:textSize="18sp" />
-
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/update"
-                android:layout_width="match_parent"
-                android:layout_height="236dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/debug"
-                android:layout_marginTop="11dp"
-                app:cardElevation="5dp">
+                android:layout_weight="14.89"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:visibility="visible"
+                app:cardElevation="2dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/button_update"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    <TextView
+                        android:id="@+id/no_rom_support"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/cancel_update"
-                        android:layout_alignBottom="@+id/cancel_update"
-                        android:layout_alignStart="@+id/cancel_update"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="14.89"
+                        android:text="No Supported ROM Installed"
+                        android:textAlignment="center"
+                        android:textColor="@color/cast_expanded_controller_background_color"
+                        android:textSize="24sp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/textView6"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toStartOf="@+id/textView6" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/rom_Card"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="11dp"
+                android:layout_weight="14.89"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:visibility="visible"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignBottom="@+id/textView6"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@+id/textView6"
+                        app:srcCompat="@drawable/ic_info_outline_black_48dp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="75dp"
+                        android:layout_marginTop="22dp"
+                        android:text="ROM Informations"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/textView5"
+                        android:layout_below="@+id/textView5"
+                        android:text="Android Version : "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView6"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:text="ROM Version : "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textbuild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VER-and"
+                        android:layout_below="@+id/textView5"
+                        android:layout_toEndOf="@+id/textView6" />
+
+                    <TextView
+                        android:id="@+id/textnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ROM_VER"
+                        android:layout_below="@+id/textView6"
+                        android:layout_toEndOf="@+id/textView2" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/device_Card"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="11dp"
+                android:layout_weight="14.89"
+                android:clickable="true"
+                android:contextClickable="true"
+                android:visibility="visible"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignBottom="@+id/textView6"
+                        android:layout_marginEnd="12dp"
+                        android:layout_toStartOf="@+id/textView6"
+                        app:srcCompat="@drawable/ic_perm_device_information_black_48dp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="75dp"
+                        android:layout_marginTop="22dp"
+                        android:text="Phone Informations"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/textView5"
+                        android:layout_below="@+id/textView5"
+                        android:text="Phone Name : "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView6"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:text="Chipset : "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textdevice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHN_NM"
+                        android:layout_below="@+id/textView5"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PHN_CHP"
+                        android:textAllCaps="true"
+                        android:layout_alignBaseline="@+id/textView2"
+                        android:layout_alignBottom="@+id/textView2"
+                        android:layout_toEndOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/textView2"
+                        android:layout_below="@+id/textView2"
+                        android:text="Density : "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/density"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="dn_nmb"
+                        android:textAllCaps="true"
+                        android:layout_below="@+id/chip"
+                        android:layout_toEndOf="@+id/textView2" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/update_Card"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/howisworks_card"
+                android:layout_marginTop="11dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="31dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Check For Updates"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/textView5"
+                        android:layout_below="@+id/textView5"
+                        android:text="Check if is a new update for your ROM"
+                        android:textSize="14sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/button_update"
+                        android:layout_alignStart="@+id/textView6"
+                        android:layout_marginTop="25dp" />
+
+                    <Button
+                        android:id="@+id/button_update"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:clickable="true"
                         android:enabled="true"
                         android:focusable="false"
                         android:focusableInTouchMode="false"
                         android:nestedScrollingEnabled="false"
-                        android:text="@string/update_button2"
+                        android:text="Check"
                         android:textColor="@color/colorPrimary"
-                        android:theme="@style/Platform.AppCompat" />
-
-                    <ProgressBar
-                        android:id="@+id/progressBar1"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_marginTop="36dp"
-                        android:visibility="invisible"
-                        android:layout_below="@+id/textView26"
-                        android:layout_alignParentStart="true" />
+                        android:theme="@style/Platform.AppCompat"
+                        android:layout_alignTop="@+id/textView5"
+                        android:layout_toEndOf="@+id/cancel_update"
+                        android:layout_marginStart="19dp" />
 
                     <Button
                         android:id="@+id/cancel_update"
+                        style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/progressBar1"
@@ -218,40 +310,15 @@
                         android:id="@+id/progres"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
                         android:text="TextView"
-                        android:visibility="invisible"
-                        android:layout_marginBottom="9dp"
-                        android:layout_alignBottom="@+id/progressBar1"
-                        android:layout_alignParentEnd="true" />
-
-                    <TextView
-                        android:id="@+id/updatepost1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Reminder : Update postponed!"
-                        android:textAllCaps="false"
                         android:textColor="@color/cast_expanded_controller_background_color"
-                        android:visibility="invisible"
-                        android:layout_marginBottom="9dp"
-                        android:layout_alignBottom="@+id/imagepost1"
-                        android:layout_toStartOf="@+id/progres" />
-
-                    <ImageView
-                        android:id="@+id/imagepost1"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginTop="41dp"
-                        android:visibility="invisible"
-                        app:srcCompat="@drawable/ic_info_black_24dp"
-                        android:layout_below="@+id/button_update"
-                        android:layout_toStartOf="@+id/updatepost1" />
-
+                        android:textStyle="italic"
+                        android:visibility="invisible" />
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
-
-
         </LinearLayout>
     </ScrollView>
 

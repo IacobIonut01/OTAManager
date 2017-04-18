@@ -10,7 +10,7 @@ android {
         minSdkVersion 22
         targetSdkVersion 25
         versionCode 1
-        versionName "10.3.1-Beta8"
+        versionName "AMT-CustomOTA-S1"
         multiDexEnabled true
     }
     buildTypes {
@@ -48,6 +48,7 @@ dependencies {
     compile 'com.google.firebase:firebase-core:10.0.1'
     compile 'com.google.firebase:firebase-messaging:10.0.1'
     compile 'com.google.android.gms:play-services:10.0.1'
+    compile 'com.google.firebase:firebase-crash:9.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
@@ -62,4 +63,10 @@ dependencies {
 }
 dependencies {
     compile 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
+    compile 'com.android.support:support-v4:25.+'
+}
+dependencies {
+    compile 'com.android.support:support-v4:25.+'
 }

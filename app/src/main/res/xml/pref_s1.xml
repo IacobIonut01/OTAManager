@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue="0"
+        android:enabled="false"
+        android:entries="@array/color_changer"
+        android:entryValues="@array/color_changer"
+        android:icon="@drawable/ic_color_lens_black_48dp"
+        android:key="theme_changer"
+        android:summary="Change theme and color of app without any external modification , this feature is experimental and isn't avaliable on stable builds"
+        android:title="Change Theme of App" />
+
+    <Preference
+        android:key="substratum"
+        android:icon="@drawable/ic_collections_bookmark_black_48dp"
+        android:title="Substratum App"
+        android:summary="Substratum Themes will income for this app">
+        <intent
+            android:targetPackage="projekt.substratum"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="projekt.substratum.LaunchActivity"/>
+    </Preference>
+</PreferenceScreen>

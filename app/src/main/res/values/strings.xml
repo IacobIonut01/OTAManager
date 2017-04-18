@@ -28,7 +28,7 @@
     <string-array name="pref_example_list_values">
         <item>1</item>
         <item>0</item>
-        <item>-1</item>
+        <item>1</item>
     </string-array>
 
     <!-- Example settings for Data & Sync -->
@@ -49,33 +49,16 @@
         <item>60</item>
         <item>180</item>
         <item>360</item>
-        <item>-1</item>
+        <item>1</item>
     </string-array>
 
-    <string-array name="device_select">
-        <item>V2_Viper_X</item>
-        <item>SPlus</item>
-        <item>X2 Soul</item>
-        <item>A7010a48</item>
-    </string-array>
-    <string-array name="rom_select">
-        <item>CyanogenMOD 13</item>
-        <item>CyanogenMOD 14</item>
-        <item>LineageOS 13</item>
-        <item>LineageOS 14</item>
-        <item>MIUI 8</item>
-        <item>AmigoOS 3.2</item>
-        <item>AmigoOS 3.0.2</item>
-    </string-array>
-    <string-array name="security_select">
-        <item>13.0-20170117-UNOFFICIAL</item>
-    </string-array>
 
 
     <string name="pref_title_system_sync_settings" translatable="false">System sync settings</string>
 
     <!-- Example settings for Notifications -->
-    <string name="pref_header_notifications" translatable="false">Notifications</string>
+    <string name="pref_header_notifications" translatable="false">Notification</string>
+    <string name="pref_header_about" translatable="false">About</string>
 
     <string name="pref_title_new_message_notifications" translatable="false">New message notifications</string>
 
@@ -118,4 +101,38 @@
     <string name="about">About</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="install_your_latest_update">Install your latest update</string>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string-array name="about_app_info">
+        <item>Server Status : Online</item>
+        <item>API Status : Operating</item>
+    </string-array>
+    <string-array name="Time_notifiy">
+        <item>30min</item>
+        <item>1h</item>
+        <item>1day</item>
+        <item>7days</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="color_changer">
+        <item>Default</item>
+        <item>Purple</item>
+        <item>Dark Purple</item>
+        <item>Midnight Blue</item>
+        <item>Yellow</item>
+    </string-array>
 </resources>

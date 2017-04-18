@@ -1,12 +1,7 @@
 package splusteam.center.ota.ota_center;
 
-import android.*;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.DownloadManager;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,12 +13,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -37,8 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import android.support.v4.content.ContextCompat;
 import com.kosalgeek.asynctask.AsyncResponse;
 import com.kosalgeek.asynctask.PostResponseAsyncTask;
@@ -46,13 +38,12 @@ import com.kosalgeek.asynctask.PostResponseAsyncTask;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import android.content.pm.PackageManager;
-import static splusteam.center.ota.ota_center.R.id.imagepost1;
 import static splusteam.center.ota.ota_center.R.id.textdevice;
-import static splusteam.center.ota.ota_center.R.id.thing_proto;
+import static splusteam.center.ota.ota_center.R.id.textnumber;
+
 import android.Manifest;
 
 import android.webkit.WebView;
@@ -96,40 +87,60 @@ public class MainActivity extends AppCompatActivity
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_INTERNET);
         }
-
         //TextView textjson = (TextView) findViewById(json);
         //textjson.setText(" ");
-
         TextView tv1 = (TextView) findViewById(R.id.textbuild);
         String str = Build.VERSION.RELEASE; //Replace SERIAL with other build strings
         tv1.setText(str);
-
         TextView tvBuildVer = (TextView) findViewById(R.id.textnumber);
         tvBuildVer.setText(String.format( Utils.getVersion()));
-
+        String tvBuildVers = tvBuildVer.getText().toString();
+        TextView density = (TextView) findViewById(R.id.density);
+        density.setText(String.format( Utils.getDensity()));
+        TextView chip = (TextView) findViewById(R.id.chip);
+        chip.setText(String.format( Utils.getChipset()));
         TextView tv3 = (TextView) findViewById(textdevice);
         String str3 = Build.DEVICE;
         tv3.setText(str3);
-
-        TextView tv4 = (TextView) findViewById(R.id.recoveryid_2);
-        tv4.setText(String.format( Utils.getRecoveryID()));
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
         button_update = (Button)findViewById(R.id.button_update);
         button_update.setOnClickListener(this);
+
+
+
+        if (tvBuildVers.contains("RR-N-")) {
+            ImageView img_rr = (ImageView) findViewById(R.id.imageView2);
+            img_rr.setImageResource(R.drawable.ic_rr_logo);
+            TextView no_rom = (TextView) findViewById(R.id.no_rom_support);
+            no_rom.setVisibility(View.GONE);
+        }
+        else if (!tvBuildVer.getText().equals("")) {
+            ImageView img_rr = (ImageView) findViewById(R.id.imageView2);
+            img_rr.setImageResource(R.color.cardview_light_background);
+            img_rr.setVisibility(View.GONE);
+            TextView no_rom = (TextView) findViewById(R.id.no_rom_support);
+            no_rom.setVisibility(View.VISIBLE);
+        }
+        else if (tvBuildVers.contains("LineageOS-14.1-")) {
+            ImageView img_rr = (ImageView) findViewById(R.id.imageView2);
+            img_rr.setImageResource(R.drawable.ic_lineageos_logo);
+            TextView no_rom = (TextView) findViewById(R.id.no_rom_support);
+            no_rom.setVisibility(View.GONE);
+        }
+        else if (tvBuildVers.contains("AICP-N-")) {
+            ImageView img_rr = (ImageView) findViewById(R.id.imageView2);
+            img_rr.setImageResource(R.drawable.ic_aicp_logo);
+            TextView no_rom = (TextView) findViewById(R.id.no_rom_support);
+            no_rom.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -266,7 +277,7 @@ public class MainActivity extends AppCompatActivity
                     tvBuildVer.setText(String.format(Utils.getVersion()));
                     alertDialogBuilder.setCancelable(false);
                     alertDialogBuilder.setTitle("Update your " + "ROM " + tvBuildVer.getText());
-                    alertDialogBuilder.setMessage("Changelog:\n"+changelog);
+                    alertDialogBuilder.setMessage(changelog);
                     alertDialogBuilder.setPositiveButton("Sure",
                             new DialogInterface.OnClickListener() {
                                 @Override
@@ -274,10 +285,6 @@ public class MainActivity extends AppCompatActivity
                                     //     Toast.makeText(MainActivity.this,file,Toast.LENGTH_LONG).show();
                                     Uri firmware_uri = Uri.parse(file_update);
                                     Firmware_DownloadId = DownloadData(firmware_uri, file_update);
-                                    final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                                    final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                                    image_update.setVisibility(View.INVISIBLE);
-                                    text_update.setVisibility(View.INVISIBLE);
                                 }
                             });
                     AlertDialog.Builder builder = alertDialogBuilder.setNegativeButton("Maybe later", new DialogInterface.OnClickListener() {
@@ -291,10 +298,6 @@ public class MainActivity extends AppCompatActivity
                             progres.setVisibility(View.INVISIBLE);
                             mProgressBar.setVisibility(View.INVISIBLE);
                             cancel_update.setVisibility(View.INVISIBLE);
-                            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                            image_update.setVisibility(View.VISIBLE);
-                            text_update.setVisibility(View.VISIBLE);
                         }
                     });
 
@@ -319,10 +322,6 @@ public class MainActivity extends AppCompatActivity
                             progres.setVisibility(View.INVISIBLE);
                             mProgressBar.setVisibility(View.INVISIBLE);
                             cancel_update.setVisibility(View.INVISIBLE);
-                            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                            image_update.setVisibility(View.INVISIBLE);
-                            text_update.setVisibility(View.INVISIBLE);
                         }
                     });
 
@@ -347,10 +346,6 @@ public class MainActivity extends AppCompatActivity
                             progres.setVisibility(View.INVISIBLE);
                             mProgressBar.setVisibility(View.INVISIBLE);
                             cancel_update.setVisibility(View.INVISIBLE);
-                            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                            image_update.setVisibility(View.INVISIBLE);
-                            text_update.setVisibility(View.INVISIBLE);
                         }
                     });
 
@@ -375,10 +370,6 @@ public class MainActivity extends AppCompatActivity
                             progres.setVisibility(View.INVISIBLE);
                             mProgressBar.setVisibility(View.INVISIBLE);
                             cancel_update.setVisibility(View.INVISIBLE);
-                            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-                            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-                            image_update.setVisibility(View.INVISIBLE);
-                            text_update.setVisibility(View.INVISIBLE);
                         }
                     });
 
@@ -407,10 +398,6 @@ public class MainActivity extends AppCompatActivity
             progres.setVisibility(View.INVISIBLE);
             mProgressBar.setVisibility(View.INVISIBLE);
             cancel_update.setVisibility(View.INVISIBLE);
-            final ImageView image_update = (ImageView) findViewById(R.id.imagepost1);
-            final TextView text_update = (TextView) findViewById(R.id.updatepost1);
-            image_update.setVisibility(View.INVISIBLE);
-            text_update.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -464,7 +451,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void btnSettings_OnClick(MenuItem item) {
-        Intent intent = new Intent(this, settings.class);
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 
@@ -472,7 +459,6 @@ public class MainActivity extends AppCompatActivity
     public void onClick(View v) {
         button_update = (Button)findViewById(R.id.button_update);
         button_update.setVisibility(View.INVISIBLE);
-
         TextView tvBuildVer = (TextView) findViewById(R.id.textnumber);
         tvBuildVer.setText(String.format(Utils.getVersion()));
         TextView tv1 = (TextView) findViewById(R.id.textbuild);
@@ -481,8 +467,6 @@ public class MainActivity extends AppCompatActivity
         TextView tv3 = (TextView) findViewById(textdevice);
         String str3 = Build.DEVICE;
         tv3.setText(str3);
-        TextView tv4 = (TextView) findViewById(R.id.recoveryid_2);
-        tv4.setText(String.format( Utils.getRecoveryID()));
         HashMap postData = new HashMap();
 
          postData.put("mobile", "android");
