@@ -1,0 +1,6 @@
+    <header
+        android:fragment="splusteam.center.ota.ota_center.SettingsActivity$GeneralPreferenceFragment"
+        android:title="@string/pref_header_general" />
+    <header
+        android:fragment="splusteam.center.ota.ota_center.SettingsActivity$NotificationPreferenceFragment"
+        android:title="@string/pref_header_notifications" />

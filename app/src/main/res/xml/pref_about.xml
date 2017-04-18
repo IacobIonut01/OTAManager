@@ -1,0 +1,64 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Application">
+
+        <Preference
+            android:defaultValue="0"
+            android:enabled="false"
+            android:entries="@array/about_app_info"
+            android:entryValues="@array/about_app_info"
+            android:icon="@drawable/ic_perm_device_information_black_48dp"
+            android:key="list_preference_1"
+            android:negativeButtonText="OK"
+            android:selectable="true"
+            android:summary="Verify Status of OTA Servers"
+            android:title="Server Status" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Themes supported">
+        <Preference
+            android:icon="@drawable/ic_collections_bookmark_black_48dp"
+            android:key="substratum"
+            android:summary="Substratum Themes will income for this app"
+            android:title="Substratum App">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="projekt.substratum.LaunchActivity"
+                android:targetPackage="projekt.substratum" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_invert_colors_black_48dp"
+            android:summary="This feature is curently unavaliable"
+            android:title="In-App Color Changer" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Settings">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="notify_enable"
+            android:summary="Enable option to get a notification when a firmware update are online"
+            android:title="Get Notification about Updates" />
+        <ListPreference
+            android:defaultValue="4"
+            android:enabled="false"
+            android:entries="@array/Time_notifiy"
+            android:entryValues="@array/Time_notifiy"
+            android:key="get_notify_time"
+            android:summary="Automatic Check for Updates "
+            android:title="Check for Updates interval" />
+        <Preference
+            android:title="Check for Updates"
+            android:summary="Check on server if is or not an update for custom ota app"
+            android:enabled="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Developers">
+
+        <Preference
+            android:title="Design and Coding : Iacob Ionut"
+            android:summary="Design and some Codes has made by Iacob Ionut"/>
+        <Preference
+            android:title="Codding and Server : Cristian Campean-Craciun"
+            android:summary="Hard Codding , Server Support and PHP codes has made by Cristian Campean-Craciun"/>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

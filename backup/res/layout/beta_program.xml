@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="splusteam.center.ota.ota_center.beta_program">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/beta_program"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rom_informations"
+            android:layout_marginTop="12dp"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/textbeta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textbeta"
+                android:layout_alignStart="@+id/imageView3"
+                android:layout_below="@+id/imageView3"
+                android:layout_marginTop="6dp"
+                android:text="This is a beta program only for testers. Bugs can be found. Don't try a beta test if you want a bugless rom!"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/textbeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView3"
+                android:layout_marginBottom="11dp"
+                android:layout_marginStart="11dp"
+                android:layout_toEndOf="@+id/imageView3"
+                android:text="Android Custom Beta Program"
+                android:textColor="@color/cast_expanded_controller_background_color"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="37dp"
+                app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/update_beta"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/update_beta"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textbeta2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="27dp"
+                android:elevation="0dp"
+                android:text="Check for Beta" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
